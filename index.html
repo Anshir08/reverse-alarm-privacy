@@ -1,29 +1,486 @@
+```html
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Reverse Alarm Privacy Policy</title>
+
+    <title>Privacy Policy — Reverse Alarm</title>
+    <meta name="description" content="Privacy Policy for Reverse Alarm. Learn how Reverse Alarm handles your data, photos, voice recognition, advertising, and subscriptions.">
+
+    <style>
+        :root {
+            --bg: #f7f8fa;
+            --surface: #ffffff;
+            --text: #17181c;
+            --muted: #666a73;
+            --border: #e5e7eb;
+            --accent: #635bff;
+            --accent-light: #f0efff;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        html {
+            scroll-behavior: smooth;
+        }
+
+        body {
+            margin: 0;
+            background: var(--bg);
+            color: var(--text);
+            font-family:
+                -apple-system,
+                BlinkMacSystemFont,
+                "Segoe UI",
+                Roboto,
+                Helvetica,
+                Arial,
+                sans-serif;
+            line-height: 1.7;
+        }
+
+        .container {
+            width: min(900px, calc(100% - 40px));
+            margin: 0 auto;
+        }
+
+        /* Header */
+        header {
+            background: var(--surface);
+            border-bottom: 1px solid var(--border);
+        }
+
+        .header-inner {
+            min-height: 76px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+        }
+
+        .brand {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+            font-weight: 700;
+            font-size: 18px;
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .brand-icon {
+            width: 38px;
+            height: 38px;
+            border-radius: 10px;
+            background: var(--accent-light);
+            display: grid;
+            place-items: center;
+            font-size: 20px;
+        }
+
+        .brand-name {
+            letter-spacing: -0.2px;
+        }
+
+        /* Hero */
+        .hero {
+            padding: 72px 0 48px;
+        }
+
+        .eyebrow {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 999px;
+            background: var(--accent-light);
+            color: var(--accent);
+            font-size: 13px;
+            font-weight: 700;
+            letter-spacing: 0.2px;
+            margin-bottom: 18px;
+        }
+
+        h1 {
+            margin: 0 0 12px;
+            font-size: clamp(36px, 6vw, 52px);
+            line-height: 1.08;
+            letter-spacing: -1.8px;
+        }
+
+        .updated {
+            margin: 0;
+            color: var(--muted);
+            font-size: 15px;
+        }
+
+        /* Main policy card */
+        main {
+            padding-bottom: 80px;
+        }
+
+        .policy {
+            background: var(--surface);
+            border: 1px solid var(--border);
+            border-radius: 18px;
+            padding: clamp(28px, 5vw, 52px);
+            box-shadow: 0 8px 30px rgba(0, 0, 0, 0.04);
+        }
+
+        .intro {
+            margin-top: 0;
+            font-size: 17px;
+            color: #383b42;
+        }
+
+        h2 {
+            margin: 44px 0 14px;
+            font-size: 24px;
+            line-height: 1.3;
+            letter-spacing: -0.5px;
+        }
+
+        h2:first-of-type {
+            margin-top: 36px;
+        }
+
+        p {
+            margin: 0 0 16px;
+            color: #3f4249;
+        }
+
+        ul {
+            margin: 10px 0 20px;
+            padding-left: 24px;
+            color: #3f4249;
+        }
+
+        li {
+            margin: 8px 0;
+            padding-left: 4px;
+        }
+
+        strong {
+            color: var(--text);
+        }
+
+        /* Highlight boxes */
+        .notice {
+            margin: 28px 0;
+            padding: 20px 22px;
+            border-radius: 12px;
+            background: var(--accent-light);
+            border: 1px solid #dedbff;
+        }
+
+        .notice p {
+            margin: 0;
+            color: #39365d;
+        }
+
+        /* Contact */
+        .contact {
+            margin-top: 32px;
+            padding: 24px;
+            border: 1px solid var(--border);
+            border-radius: 14px;
+            background: #fafafa;
+        }
+
+        .email {
+            display: inline-block;
+            margin-top: 4px;
+            color: var(--accent);
+            font-weight: 700;
+            text-decoration: none;
+            word-break: break-word;
+        }
+
+        .email:hover {
+            text-decoration: underline;
+        }
+
+        /* Footer */
+        footer {
+            border-top: 1px solid var(--border);
+            background: var(--surface);
+        }
+
+        .footer-inner {
+            min-height: 80px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 20px;
+            color: var(--muted);
+            font-size: 13px;
+        }
+
+        .footer-brand {
+            font-weight: 700;
+            color: var(--text);
+        }
+
+        /* Mobile */
+        @media (max-width: 600px) {
+            .container {
+                width: min(100% - 28px, 900px);
+            }
+
+            .header-inner {
+                min-height: 68px;
+            }
+
+            .hero {
+                padding: 48px 0 32px;
+            }
+
+            h1 {
+                letter-spacing: -1px;
+            }
+
+            .policy {
+                border-radius: 14px;
+                padding: 26px 22px;
+            }
+
+            h2 {
+                font-size: 21px;
+                margin-top: 36px;
+            }
+
+            .footer-inner {
+                min-height: 70px;
+                flex-direction: column;
+                justify-content: center;
+                gap: 4px;
+            }
+        }
+    </style>
 </head>
+
 <body>
-    <h1>Privacy Policy</h1>
 
-    <p>Last updated: September 12, 2026</p>
+<header>
+    <div class="container header-inner">
+        <a class="brand" href="#">
+            <span class="brand-icon">⏰</span>
+            <span class="brand-name">Reverse Alarm</span>
+        </a>
+    </div>
+</header>
 
-    <!-- Your privacy policy here -->
-    Reverse Alarm is a local alarm clock. We do not create accounts or collect your name, email, or phone number inside the app.
+<section class="hero">
+    <div class="container">
+        <span class="eyebrow">LEGAL</span>
+        <h1>Privacy Policy</h1>
+        <p class="updated">Last updated: September 12, 2026</p>
+    </div>
+</section>
 
-    On this device we store alarm times, labels, sounds you import, challenge settings, and wake-up progress (streak, XP, completion history). That data stays on the device unless you export it or use Reset All Data.
-    
-    If you use a Medium or Hard photo challenge, a reduced JPEG of the photo is sent to Google Gemini so we can check that the requested object is in the picture. We do not keep that photo in our cloud.
-    
-    If you use the voice challenge, the operating system’s speech recognizer processes your speech. We keep only a short transcript in memory until the challenge ends.
-    
-    Free users may see Google ads (AdMob). In regions that require it, we show Google’s consent form first. Ads use device advertising identifiers and app-activity signals. Premium hides ads.
-    
-    Paid plans are processed by Google Play and RevenueCat. They receive purchase and entitlement data, not your alarm list.
-    
-    Contact support@reversealarm.app to ask questions or request deletion of data we control. Use Reset All Data in Settings to erase local data. You can also reset ad personalization in your Google account settings.
-    
+<main>
+    <div class="container">
+        <article class="policy">
+
+            <p class="intro">
+                Reverse Alarm is a local alarm clock designed to help you wake up
+                by requiring you to complete challenges before an alarm can be dismissed.
+                This Privacy Policy explains what information Reverse Alarm handles
+                and how that information is used.
+            </p>
+
+            <h2>1. Information We Collect</h2>
+
+            <p>
+                Reverse Alarm does not require you to create an account and does not
+                collect your name, email address, or phone number inside the app.
+            </p>
+
+            <p>
+                Depending on the features you use, certain information may be processed
+                by third-party services to provide specific app functionality.
+            </p>
+
+            <h2>2. Information Stored on Your Device</h2>
+
+            <p>
+                Reverse Alarm stores core app information locally on your device,
+                including:
+            </p>
+
+            <ul>
+                <li>Alarm schedules and alarm labels</li>
+                <li>Imported custom alarm sounds</li>
+                <li>Challenge settings</li>
+                <li>Wake-up progress, including streaks, XP, and completion history</li>
+            </ul>
+
+            <p>
+                This information remains on your device unless you choose to export
+                it or use the Reset All Data feature.
+            </p>
+
+            <h2>3. Photos and Google Gemini</h2>
+
+            <p>
+                If you use a Medium or Hard photo challenge, Reverse Alarm uses a
+                reduced version of the photo you provide to check whether the requested
+                object appears in the image.
+            </p>
+
+            <p>
+                The image is sent to Google Gemini for this purpose. Reverse Alarm does
+                not keep the photo in its own cloud storage.
+            </p>
+
+            <div class="notice">
+                <p>
+                    <strong>Photo processing:</strong>
+                    A compressed JPEG and the requested object information may be sent
+                    to Google Gemini when you use a photo challenge.
+                </p>
+            </div>
+
+            <h2>4. Voice Recognition</h2>
+
+            <p>
+                If you use the voice challenge, your speech is processed by the
+                operating system's speech recognition service.
+            </p>
+
+            <p>
+                Reverse Alarm does not store audio recordings. A short transcript may
+                remain in memory while the challenge is active and is discarded when
+                the challenge ends.
+            </p>
+
+            <h2>5. Advertising</h2>
+
+            <p>
+                Free users may see advertisements provided by Google AdMob.
+                Depending on your region, Google may display a consent form before
+                advertising is requested.
+            </p>
+
+            <p>
+                Advertising may use device advertising identifiers and app-activity
+                signals to provide and measure advertising. Premium users do not see
+                advertisements.
+            </p>
+
+            <h2>6. Purchases and Subscriptions</h2>
+
+            <p>
+                Paid plans and subscriptions are processed through Google Play and
+                RevenueCat.
+            </p>
+
+            <p>
+                These services may receive purchase and entitlement information needed
+                to process and verify your subscription. Reverse Alarm does not require
+                an in-app account and does not collect your email address as part of
+                the subscription process.
+            </p>
+
+            <h2>7. How We Share Information</h2>
+
+            <p>
+                Reverse Alarm does not sell your personal information.
+            </p>
+
+            <p>
+                Information may be transmitted to third-party service providers when
+                necessary to provide features you explicitly use, including:
+            </p>
+
+            <ul>
+                <li>
+                    <strong>Google Gemini</strong> — photo challenge processing
+                </li>
+                <li>
+                    <strong>Operating system speech recognition</strong> — voice challenge processing
+                </li>
+                <li>
+                    <strong>Google AdMob</strong> — advertising for eligible free users
+                </li>
+                <li>
+                    <strong>Google Play and RevenueCat</strong> — subscription and purchase processing
+                </li>
+            </ul>
+
+            <h2>8. Information Security</h2>
+
+            <p>
+                Information transmitted to the third-party services described in this
+                policy is sent using encrypted connections such as HTTPS where supported
+                by those services.
+            </p>
+
+            <p>
+                Reverse Alarm does not maintain a user account database containing your
+                name, email address, or phone number.
+            </p>
+
+            <h2>9. Data Deletion</h2>
+
+            <p>
+                You can use <strong>Reset All Data</strong> in the Reverse Alarm
+                Settings screen to delete locally stored app data, including alarm
+                schedules, preferences, progress, notifications, and custom sounds.
+            </p>
+
+            <p>
+                Reset All Data does not delete information that may already have been
+                processed or retained by independent third-party services such as
+                Google, AdMob, or RevenueCat. Requests concerning data held by those
+                services may need to be made directly to the applicable provider.
+            </p>
+
+            <p>
+                You may also contact us if you have a question about deletion of data
+                controlled by Reverse Alarm.
+            </p>
+
+            <h2>10. Children's Privacy</h2>
+
+            <p>
+                Reverse Alarm is not designed specifically for children and is not
+                intended to knowingly collect personal information from children.
+            </p>
+
+            <h2>11. Changes to This Privacy Policy</h2>
+
+            <p>
+                We may update this Privacy Policy when Reverse Alarm's features,
+                services, or data practices change. The date at the top of this page
+                indicates when the policy was most recently updated.
+            </p>
+
+            <h2>12. Contact Us</h2>
+
+            <div class="contact">
+                <p>
+                    If you have questions about this Privacy Policy or want to request
+                    deletion of data controlled by Reverse Alarm, contact us at:
+                </p>
+
+                <a class="email" href="mailto:support@reversealarm.app">
+                    support@reversealarm.app
+                </a>
+            </div>
+
+        </article>
+    </div>
+</main>
+
+<footer>
+    <div class="container footer-inner">
+        <span class="footer-brand">Reverse Alarm</span>
+        <span>© 2026 Reverse Alarm</span>
+    </div>
+</footer>
+
 </body>
 </html>
+```
